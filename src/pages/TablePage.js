@@ -11,8 +11,8 @@ function TablePage(){
 
     const config = [
         {label: 'Fruits', render: (fruit) => fruit.name},
-        {label: 'Color'},
-        {label: 'Score'},
+        {label: 'Color', render: (fruit) => <div className={`p-2 m-3 ${fruit.color}`}/>},
+        {label: 'Score', render: (fruit) => fruit.score, sort: (a,b) => {}},
     ]
     return <Table data={data} config={config}/>
 }
